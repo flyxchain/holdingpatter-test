@@ -93,6 +93,3 @@ def main():
         else:
             return render_template('incorrecta.html', bearing = bearingToStation, realholding = holding, course = outboundCourse)
     return render_template('index.html', bearing = bearingToStation, realholding = holding, course = outboundCourse)
-
-if __name__ == "__main__":
-    app.run()
