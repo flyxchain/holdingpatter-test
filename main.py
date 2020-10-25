@@ -176,11 +176,11 @@ def index():
     if request.method == 'POST':
         valorseleccionado = request.form.get('holdingValueSelected')
         if valorseleccionado == "offsetHolding" and offsetHolding == True:
-            return render_template('correcta-hardcore.html', bearing = bearingToStation, realholding = holding, course = outboundCourse)
+            return render_template('correcta-hardcore.html', bearing = bearingToStation, realholding = holding, course = outboundCourse, titulo = "HARDCORE VERSION")
         elif valorseleccionado == "directHolding" and directHolding == True:
-            return render_template('correcta-hardcore.html', bearing = bearingToStation, realholding = holding, course = outboundCourse)
+            return render_template('correcta-hardcore.html', bearing = bearingToStation, realholding = holding, course = outboundCourse, titulo = "HARDCORE VERSION")
         elif valorseleccionado == "parallelHolding" and parallelHolding == True:
-            return render_template('correcta-hardcore.html', bearing = bearingToStation, realholding = holding, course = outboundCourse)
+            return render_template('correcta-hardcore.html', bearing = bearingToStation, realholding = holding, course = outboundCourse, titulo = "HARDCORE VERSION")
         else:
             return render_template('incorrecta-hardcore.html', bearing = bearingToStation, realholding = holding, course = outboundCourse)
-    return render_template('hardcore.html', bearing = bearingToStation, realholding = holding, course = outboundCourse)
+    return render_template('hardcore.html', bearing = bearingToStation, realholding = holding, course = outboundCourse, titulo = "HARDCORE VERSION")
