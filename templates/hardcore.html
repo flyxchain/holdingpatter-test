@@ -39,16 +39,13 @@
 					</form>
 				</div>
 				<div class="col-md-6">
-					<p>
-						<div class="row begin-countdown">
+					<p>                      
+                        <div class="row begin-countdown">
                             <div class="col-md-12 text-center">
                               <progress value="10" max="10" id="pageBeginCountdown"></progress>
                               <p> Te quedan <span id="pageBeginCountdownText">10 </span> segundos</p>
                             </div>
                           </div>
-					</p>
-					<p>
-                        <div class="alert alert-danger" role="alert"><h4 class="alert-heading">La opción escogida es incorrecta</h4></div>   
 					</p>
 				</div>
             </div>
@@ -71,21 +68,21 @@
 	</div>
 </div>
 <script>
-	ProgressCountdown(10, 'pageBeginCountdown', 'pageBeginCountdownText').then(value => alert(`Page has started: ${value}.`));
-	
-	function ProgressCountdown(timeleft, bar, text) {
-	  return new Promise((resolve, reject) => {
-		var countdownTimer = setInterval(() => {
-		  timeleft--;
-	
-		  document.getElementById(bar).value = timeleft;
-		  document.getElementById(text).textContent = timeleft;
-	
-		  if (timeleft <= 0) {
-			clearInterval(countdownTimer);
-			location.reload()
-		  }
-		}, 1000);
-	  });
-	}
-	</script>
+ProgressCountdown(10, 'pageBeginCountdown', 'pageBeginCountdownText').then(value => alert(`Page has started: ${value}.`));
+
+function ProgressCountdown(timeleft, bar, text) {
+  return new Promise((resolve, reject) => {
+    var countdownTimer = setInterval(() => {
+      timeleft--;
+
+      document.getElementById(bar).value = timeleft;
+      document.getElementById(text).textContent = timeleft;
+
+      if (timeleft <= 0) {
+        clearInterval(countdownTimer);
+        location.reload()
+      }
+    }, 1000);
+  });
+}
+</script>
