@@ -1,6 +1,5 @@
 {% extends "base.html" %}
-    
-<div class="container">
+{% block contenido %}
     <div class="row">
         <div class="col-md-12">
         <p>
@@ -16,7 +15,7 @@
                 </h2>
                 <br /> <br />
 				<p>
-					 {% block content %}
+			{% block content %}
             <p class="lead">El bearing a la estación es <strong>{{bearing}}</strong> con un curso de outbound de <strong>{{ course }}</strong> en una espera <strong>{{ realholding }}</strong></p>
             {% endblock %}
 				</p>
@@ -66,4 +65,4 @@
 			</div>
 		</div>
 	</div>
-</div>
+{% endblock %}
