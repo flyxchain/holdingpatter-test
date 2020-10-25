@@ -95,7 +95,7 @@ def main():
     return render_template('index.html', bearing = bearingToStation, realholding = holding, course = outboundCourse)
 
 @app.route('/hardcore', methods=['GET', 'POST'])
-def index():
+def hardcore():
     bearingToStation = random.randint(0, 360)
     inboundCourse = random.randint(0, 360)
     if (inboundCourse > 180):
