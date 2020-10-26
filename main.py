@@ -20,10 +20,10 @@ def main():
     else:
         relativebearingplus70 =  bearingToStation + 70
 
-    if (bearingToStation + 10) > 360: 
-        relativebearingplus10 = bearingToStation + 10 - 360
+    if (bearingToStation + 5) > 360: 
+        relativebearingplus10 = bearingToStation + 5 - 360
     else:
-        relativebearingplus10 =  bearingToStation + 10
+        relativebearingplus10 =  bearingToStation + 5
 
     if (bearingToStation + 110) > 360: 
         relativebearigplus110 = bearingToStation + 110 - 360
@@ -35,10 +35,10 @@ def main():
     else:
         relativebearingminus70 =  bearingToStation - 70
 
-    if (bearingToStation - 10) > 360: 
-        relativebearingminus10 = bearingToStation - 10 - 360
+    if (bearingToStation - 5) > 360: 
+        relativebearingminus10 = bearingToStation - 5 - 360
     else:
-        relativebearingminus10 =  bearingToStation - 10
+        relativebearingminus10 =  bearingToStation - 5
 
     if (bearingToStation - 110) > 360: 
         relativebearingminus110 = bearingToStation - 110 - 360
@@ -50,37 +50,37 @@ def main():
         offsetHolding = True
         directHolding = False
         parallelHolding = False
-        # print("La entrada es en gota")
+        print("La entrada es en gota")
     elif outboundCourse < (relativebearingminus10) and outboundCourse > (relativebearingminus110) and holding == "Estandar":
         offsetHolding = False
         directHolding = False
         parallelHolding = True
-        # print("La entrada es paralela")
+        print("La entrada es paralela")
     elif outboundCourse > (relativebearingplus10) and outboundCourse < (relativebearigplus110) and holding == "No Estandar":
         offsetHolding = False
         directHolding = False
         parallelHolding = True
-        # print("La entrada es paralela")
+        print("La entrada es paralela")
     elif outboundCourse < (relativebearingminus10) and outboundCourse > (relativebearingminus70) and holding == "No Estandar":
         offsetHolding = True
         directHolding = False
         parallelHolding = False
-        # print("La entrada es en gota")
+        print("La entrada es en gota")
     elif outboundCourse > (relativebearingminus10) and outboundCourse < (relativebearingplus10):
         offsetHolding = True
         directHolding = False
         parallelHolding = True
-        # print("La entrada es en gota o paralela")
+        print("La entrada es en gota o paralela")
     elif outboundCourse > (relativebearigplus110) and outboundCourse < (relativebearingminus70) and holding == "No Estandar":
         offsetHolding = False
         directHolding = True
         parallelHolding = False
-        # print("La entrada es directa")
+        print("La entrada es directa")
     else: 
         offsetHolding = False
         directHolding = True
         parallelHolding = False
-        # print("La entrada es directa")
+        print("La entrada es directa")
 
     if request.method == 'POST':
         valorseleccionado = request.form.get('holdingValueSelected')
