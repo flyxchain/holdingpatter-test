@@ -5,42 +5,42 @@ app = Flask(__name__)
 
 @app.route("/", methods=['GET', 'POST'])
 def main():
-    bearingToStation = random.randint(0, 360)
-    inboundCourse = random.randint(0, 360)
+    bearingToStation = random.randrange(0, 360, 10)
+    inboundCourse = random.randrange(0, 360, 10)
     if (inboundCourse > 180):
         outboundCourse = inboundCourse - 180
     else:
         outboundCourse = inboundCourse + 180
-        
+
     holdingTypes = ('Estandar' , 'No estandar')
     holding = random.choice(holdingTypes)
 
-    if (bearingToStation + 70) > 360: 
+    if (bearingToStation + 70) > 360:
         relativebearingplus70 = bearingToStation + 70 - 360
     else:
         relativebearingplus70 =  bearingToStation + 70
 
-    if (bearingToStation + 5) > 360: 
+    if (bearingToStation + 5) > 360:
         relativebearingplus10 = bearingToStation + 5 - 360
     else:
         relativebearingplus10 =  bearingToStation + 5
 
-    if (bearingToStation + 110) > 360: 
+    if (bearingToStation + 110) > 360:
         relativebearigplus110 = bearingToStation + 110 - 360
     else:
         relativebearigplus110 =  bearingToStation + 110
 
-    if (bearingToStation - 70) > 360: 
+    if (bearingToStation - 70) > 360:
         relativebearingminus70 = bearingToStation - 70 - 360
     else:
         relativebearingminus70 =  bearingToStation - 70
 
-    if (bearingToStation - 5) > 360: 
+    if (bearingToStation - 5) > 360:
         relativebearingminus10 = bearingToStation - 5 - 360
     else:
         relativebearingminus10 =  bearingToStation - 5
 
-    if (bearingToStation - 110) > 360: 
+    if (bearingToStation - 110) > 360:
         relativebearingminus110 = bearingToStation - 110 - 360
     else:
         relativebearingminus110 =  bearingToStation - 110
@@ -76,7 +76,7 @@ def main():
         directHolding = True
         parallelHolding = False
         print("La entrada es directa")
-    else: 
+    else:
         offsetHolding = False
         directHolding = True
         parallelHolding = False
@@ -102,36 +102,36 @@ def hardcore():
         outboundCourse = inboundCourse - 180
     else:
         outboundCourse = inboundCourse + 180
-        
+
     holdingTypes = ('Estandar' , 'No estandar')
     holding = random.choice(holdingTypes)
 
-    if (bearingToStation + 70) > 360: 
+    if (bearingToStation + 70) > 360:
         relativebearingplus70 = bearingToStation + 70 - 360
     else:
         relativebearingplus70 =  bearingToStation + 70
 
-    if (bearingToStation + 10) > 360: 
+    if (bearingToStation + 10) > 360:
         relativebearingplus10 = bearingToStation + 10 - 360
     else:
         relativebearingplus10 =  bearingToStation + 10
 
-    if (bearingToStation + 110) > 360: 
+    if (bearingToStation + 110) > 360:
         relativebearigplus110 = bearingToStation + 110 - 360
     else:
         relativebearigplus110 =  bearingToStation + 110
 
-    if (bearingToStation - 70) > 360: 
+    if (bearingToStation - 70) > 360:
         relativebearingminus70 = bearingToStation - 70 - 360
     else:
         relativebearingminus70 =  bearingToStation - 70
 
-    if (bearingToStation - 10) > 360: 
+    if (bearingToStation - 10) > 360:
         relativebearingminus10 = bearingToStation - 10 - 360
     else:
         relativebearingminus10 =  bearingToStation - 10
 
-    if (bearingToStation - 110) > 360: 
+    if (bearingToStation - 110) > 360:
         relativebearingminus110 = bearingToStation - 110 - 360
     else:
         relativebearingminus110 =  bearingToStation - 110
@@ -167,7 +167,7 @@ def hardcore():
         directHolding = True
         parallelHolding = False
         # print("La entrada es directa")
-    else: 
+    else:
         offsetHolding = False
         directHolding = True
         parallelHolding = False
