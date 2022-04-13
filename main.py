@@ -96,8 +96,8 @@ def main():
 
 @app.route('/hardcore', methods=['GET', 'POST'])
 def hardcore():
-    bearingToStation = random.randint(0, 360)
-    inboundCourse = random.randint(0, 360)
+    bearingToStation = random.randrange(0, 360, 10)
+    inboundCourse = random.randrange(0, 360, 10)
     if (inboundCourse > 180):
         outboundCourse = inboundCourse - 180
     else:
