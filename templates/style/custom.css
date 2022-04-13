@@ -1,0 +1,20 @@
+#cabecera-logo {
+  margin-top:2rem;
+  text-align:center;
+}
+#izquierda-selector {
+  padding-left:1rem;
+}
+#footer {
+  padding-top: 2rem;
+}
+.jumbotron {
+  padding: 1rem !important;
+  background-color: rgb(0 123 255 / 10%) !important;
+  margin-bottom: 1rem !important;
+}
+@media (max-width: 768px) {
+  #columnaDerecha {
+    margin-top: 1rem !important;
+  }
+}
