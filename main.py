@@ -1,4 +1,4 @@
-from flask import Flask, render_template, json, request, flash
+import Flask
 import random
 
 app = Flask(__name__)
